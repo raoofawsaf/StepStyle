@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | StepStyle</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FIXED FONT AWESOME CDN LINK -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="main-header">
+        <nav class="navbar" aria-label="Main Navigation">
+
+            <!-- Logo -->
+            <div class="logo">
+                <i class="fa-solid fa-shoe-prints"></i>
+                <span>StepStyle</span>
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <!-- Right Side Icons -->
+            <div class="nav-actions">
+                <!-- Search -->
+                <button class="icon-btn" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <!-- Wishlist -->
+                <a href="wishlist.html" class="icon-btn" aria-label="Wishlist">
+                    <i class="fa-solid fa-heart"></i>
+                </a>
+                <!-- Cart -->
+                <a href="cart.html" class="icon-btn active" aria-label="Shopping Cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+                <!-- Login -->
+                <a href="login.html" class="btn login-btn">Login</a>
+                <!-- Mobile Menu -->
+                <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- ================= PREMIUM CART SECTION ================= -->
+    <section class="premium-cart-section">
+        <div class="cart-layout-wrapper">
+            <h1 class="cart-main-title">Shopping Cart</h1>
+
+            <div class="cart-split-grid">
+                <!-- Left Side: List of items added to cart -->
+                <div class="cart-items-panel">
+                    <!-- JavaScript hooks into this container -->
+                    <div id="cartItems"></div>
+                </div>
+
+                <!-- Right Side: Order Summary Invoice Card -->
+                <div class="cart-summary-panel">
+                    <div class="sticky-summary-invoice">
+                        <h2>Order Summary</h2>
+                        
+                        <div class="invoice-breakdown">
+                            <div class="invoice-row">
+                                <span>Subtotal</span>
+                                <span id="subtotalPrice">₹0.00</span>
+                            </div>
+                            <div class="invoice-row">
+                                <span>Estimated Shipping</span>
+                                <span class="free-shipping-text">FREE</span>
+                            </div>
+                            <div class="invoice-row">
+                                <span>Tax Extra</span>
+                                <span>₹0.00</span>
+                            </div>
+                            <hr class="invoice-divider">
+                            <div class="invoice-row total-highlight-row">
+                                <span>Total Amount</span>
+                                <span id="totalPrice">₹0.00</span>
+                            </div>
+                        </div>
+
+                        <div class="cart-actions-stack">
+                            <button type="button" class="checkout-grand-btn" id="checkoutBtn">
+                                <span>Proceed To Checkout</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                            <a href="products.html" class="continue-shopping-link">
+                                <i class="fa-solid fa-arrow-left"></i>
+                                <span>Continue Shopping</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="main-footer">
+        <div class="footer-container">
+
+            <div class="footer-box">
+                <h2>StepStyle</h2>
+                <p>Premium footwear crafted for people who never stop moving.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="categories.html">Categories</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-box">
+                <h3>Customer Care</h3>
+                <a href="#">Track Order</a>
+                <a href="#">Shipping</a>
+                <a href="#">Returns</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+
+            <div class="footer-box">
+                <h3>Contact</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Hyderabad, India</p>
+                <p><i class="fa-solid fa-envelope"></i> stepstyle@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> +91 9876543210</p>
+            </div>
+
+        </div>
+        <hr>
+        <p class="copyright">© 2026 StepStyle. All Rights Reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+
+
+</body>
+</html>

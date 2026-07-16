@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StepStyle | Products</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+
+    <!-- ================= TAPE TICKER (Moving Announcement) ================= -->
+    <div class="ticker-wrap">
+        <div class="ticker">
+            <div class="ticker-item">// SYSTEM RESTOCK: RUNNER V2 SHIELD [ALL SIZES ACTIVE]</div>
+            <div class="ticker-item">// MEMBERS ONLY: USE CODE 'STREET26' FOR 10% OFF</div>
+            <div class="ticker-item">// LIMITED SUPPLY: SHOE CARE CORES RUNNING LOW</div>
+        </div>
+    </div>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="main-header">
+        <nav class="navbar" aria-label="Main Navigation">
+            <div class="logo">
+                <i class="fa-solid fa-shoe-prints"></i>
+                <span>StepStyle</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="icon-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <a href="wishlist.html" class="icon-btn" aria-label="Wishlist"><i class="fa-solid fa-heart"></i></a>
+                <a href="cart.html" class="icon-btn" aria-label="Shopping Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="login.html" class="btn login-btn">Login</a>
+                <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= HERO ================= -->
+     <!-- ================= IMMERSIVE SUB-HERO (Matches Home Aesthetic) ================= -->
+    <section class="hero-sub">
+        <div class="hero-glow"></div>
+        <div class="hero-sub-container">
+            <!-- Left Side Text Block -->
+            <div class="hero-sub-content">
+                <span class="hero-sub-tag">// INSTANT ACCESS</span>
+                <h1>THE <span class="highlight-orange">ARCHIVE</span></h1>
+                <p>Deconstruct, refine, and upgrade your rotation. Browse our complete hardware ecosystem.</p>
+                <div class="hero-sub-buttons">
+                    <a href="#products" class="btn-sub-action">DISCOVER ALL CORES <i class="fa-solid fa-arrow-down"></i></a>
+                </div>
+            </div>
+            <!-- Right Side Immersive 3D Sneaker Visual -->
+            <div class="hero-sub-visual">
+                <div class="visual-glow"></div>
+                <span class="visual-badge">New Drop</span>
+                <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=800&q=80" alt="Featured sneaker">
+            </div>
+        </div>
+    </section>
+    <!-- ================= PRODUCTS SECTION ================= -->
+   <!-- ================= PRODUCTS SECTION ================= -->
+    <section class="products-section" id="products">
+        <div class="container">
+            
+            <!-- System Monitor (Interactive Console UI) -->
+            <div class="system-monitor">
+                <span class="pulse-node"></span>
+                <span id="terminal-log">CORE_DB: ONLINE // PROTOCOL STEPSTYLE_2026</span>
+            </div>
+
+            <!-- SEARCH & FILTERS PANEL (Glassmorphism Effect) -->
+            <div class="filter-panel-glass">
+                <div class="search-box-cool">
+                    <input type="text" id="searchInput" placeholder="Search sneakers, tech, care..." aria-label="Search catalog">
+                    <button id="searchBtn" aria-label="Submit Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+
+                <div class="filters-grid">
+                    <div class="select-wrapper">
+                        <select id="categoryFilter" aria-label="Filter by Category">
+                            <option value="all">All Categories</option>
+                            <option value="Sneakers">Sneakers</option>
+                            <option value="Running Shoes">Running Shoes</option>
+                            <option value="Sports Shoes">Sports Shoes</option>
+                            <option value="Formal Shoes">Formal Shoes</option>
+                            <option value="Casual Shoes">Casual Shoes</option>
+                            <option value="Slippers">Slippers</option>
+                            <option value="Sandals">Sandals</option>
+                            <option value="Accessories">Accessories</option>
+                            <option value="Shoe Care">Shoe Care</option>
+                        </select>
+                    </div>
+
+                    <div class="select-wrapper">
+                        <select id="priceFilter" aria-label="Sort by Price">
+                            <option value="default">Sort By Price</option>
+                            <option value="low">Low To High</option>
+                            <option value="high">High To Low</option>
+                        </select>
+                    </div>
+
+                    <div class="select-wrapper">
+                        <select id="brandFilter" aria-label="Filter by Brand">
+                            <option value="all">All Brands</option>
+                            <option value="StepStyle">StepStyle</option>
+                            <option value="Premium">Premium</option>
+                            <option value="SportX">SportX</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PREMIUM ASYMMETRIC PRODUCTS GRID -->
+            <div class="product-grid" id="productGrid">
+                
+                <!-- 1. FEATURED / HIGHLIGHTED CARD (Takes double width for cool look) -->
+                <div class="product-card featured-card">
+                    <div class="badge-tag">// SYSTEM HOT DROP</div>
+                    <div class="product-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="Runner V2">
+                    </div>
+                    <div class="product-card-details">
+                        <span class="category">Running Shoes</span>
+                        <h3>Runner V2 "Neon Shield"</h3>
+                        <p class="featured-desc">Featuring our responsive responsive sole unit and dynamic airlock weave technology.</p>
+                        <div class="price-row">
+                            <span class="price">$189.00</span>
+                            <button class="btn-add-cart">LOCK IN <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. STANDARD PRODUCT CARD -->
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?auto=format&fit=crop&w=500&q=80" alt="Sneaker Green">
+                    </div>
+                    <div class="product-card-details">
+                        <span class="category">Sneakers</span>
+                        <h3>Volt Street Low</h3>
+                        <div class="price-row">
+                            <span class="price">$120.00</span>
+                            <button class="btn-add-cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. STANDARD PRODUCT CARD -->
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=500&q=80" alt="Sneaker Purple">
+                    </div>
+                    <div class="product-card-details">
+                        <span class="category">Sneakers</span>
+                        <h3>Cyber Wave High</h3>
+                        <div class="price-row">
+                            <span class="price">$145.00</span>
+                            <button class="btn-add-cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. INTERACTIVE STATIC PROMO MODULE (Breaks the monotony beautifully!) -->
+                <div class="grid-promo-card">
+                    <div class="promo-glow"></div>
+                    <div class="promo-content">
+                        <i class="fa-solid fa-bolt-lightning promo-icon"></i>
+                        <h4>MEMBERS PROMO</h4>
+                        <h3>GET 10% OFF</h3>
+                        <p>Unlock premium shipping & prototype access instantly.</p>
+                        <span class="promo-code">USE CODE: <mark>STREET26</mark></span>
+                    </div>
+                </div>
+
+                <!-- 5. STANDARD PRODUCT CARD -->
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=500&q=80" alt="Classic Sneaker">
+                    </div>
+                    <div class="product-card-details">
+                        <span class="category">Casual Shoes</span>
+                        <h3>Classic Retro Core</h3>
+                        <div class="price-row">
+                            <span class="price">$95.00</span>
+                            <button class="btn-add-cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. STANDARD PRODUCT CARD (Shoe Care/Accessory example) -->
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <!-- Placing a standard care placeholder/kit -->
+                        <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=500&q=80" alt="Clean Kit">
+                    </div>
+                    <div class="product-card-details">
+                        <span class="category">Shoe Care</span>
+                        <h3>Ultimate Clean Shield</h3>
+                        <div class="price-row">
+                            <span class="price">$25.00</span>
+                            <button class="btn-add-cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- Grid End -->
+            
+        </div>
+    </section>
+    <!-- ================= CUSTOMER REVIEWS ================= -->
+    <section class="reviews-section">
+        <div class="container">
+            <div class="section-header-cool">
+                <h2>VERIFIED EXPERIENCE</h2>
+            </div>
+            
+            <div class="review-grid-cool">
+                <div class="review-card-cool">
+                    <div class="review-header">
+                        <h4>Rahul Sharma</h4>
+                        <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</span>
+                    </div>
+                    <div class="stars-neon">★★★★★</div>
+                    <p>"Amazing cushioning responsiveness. Best pair of trainers I've owned."</p>
+                </div>
+
+                <div class="review-card-cool">
+                    <div class="review-header">
+                        <h4>Sara Khan</h4>
+                        <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</span>
+                    </div>
+                    <div class="stars-neon">★★★★★</div>
+                    <p>"Loved the sneaker collection. Very stylish and comfortable for long days."</p>
+                </div>
+
+                <div class="review-card-cool">
+                    <div class="review-header">
+                        <h4>Arjun Patel</h4>
+                        <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</span>
+                    </div>
+                    <div class="stars-neon">★★★★☆</div>
+                    <p>"Grabbed their signature sneaker cleaner. Worked perfectly on white knit uppers."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= DROP BANNER ================= -->
+    <section class="drop-banner-dark">
+        <div class="drop-banner-glow"></div>
+        <div class="drop-banner-content">
+            <span class="drop-badge">NEXT SYSTEM DROP</span>
+            <h2>DON'T MISS THE RELEASE</h2>
+            <p>Get priority access to limited edition drops, prototypes, and exclusive member discounts.</p>
+            <div class="drop-form">
+                <input type="email" placeholder="ENTER SYSTEM EMAIL" aria-label="Email Input">
+                <button class="btn-drop">INITIALIZE <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-box">
+                <h2>StepStyle</h2>
+                <p>Premium footwear crafted for people who never stop moving.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="categories.html">Categories</a>
+            </div>
+
+            <div class="footer-box">
+                <h3>Customer Care</h3>
+                <a href="#">Track Order</a>
+                <a href="#">Shipping</a>
+                <a href="#">Returns</a>
+            </div>
+
+            <div class="footer-box">
+                <h3>Contact</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Hyderabad, India</p>
+                <p><i class="fa-solid fa-envelope"></i> stepstyle@gmail.com</p>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">© 2026 StepStyle. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript Assets -->
+   
+    <script src="script.js"></script>
+</body>
+</html>

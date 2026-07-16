@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | StepStyle</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+        /* Modern Checkout Enhancement Styling */
+        body { font-family: 'Poppins', sans-serif; background-color: #f9f9f9; color: #333; margin: 0; }
+        .checkout-section { padding: 40px 20px; max-width: 1200px; margin: 0 auto; }
+        .checkout-two-column-grid { display: grid; grid-template-columns: 7fr 4fr; gap: 30px; align-items: start; }
+        
+        /* Progress Steps Bar */
+        .checkout-progress-bar { display: flex; justify-content: space-between; max-width: 600px; margin: 0 auto 40px auto; position: relative; }
+        .checkout-progress-bar::before { content: ''; position: absolute; top: 18px; left: 0; right: 0; height: 2px; background: #e0e0e0; z-index: 1; }
+        .progress-line-fill { position: absolute; top: 18px; left: 0; width: 66%; height: 2px; background: #333; z-index: 1; }
+        .step { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; text-align: center; }
+        .step-icon { width: 38px; height: 38px; border-radius: 50%; background: #e0e0e0; color: #666; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
+        .step.active .step-icon { background: #333; color: #fff; transform: scale(1.1); }
+        .step.completed .step-icon { background: #2e7d32; color: #fff; }
+        .step-label { font-size: 0.8rem; margin-top: 8px; font-weight: 500; color: #888; }
+        .step.active .step-label { color: #333; font-weight: 600; }
+
+        /* Form Controls & Containers */
+        .checkout-box-card, .sticky-summary-card { background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); margin-bottom: 25px; border: 1px solid #eee; }
+        .checkout-box-card h2, .sticky-summary-card h2 { font-size: 1.25rem; font-weight: 600; margin-top: 0; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .form-input-stack input { width: 100%; padding: 12px 16px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; font-size: 0.95rem; box-sizing: border-box; transition: 0.3s; }
+        .form-input-stack input:focus { border-color: #333; outline: none; box-shadow: 0 0 0 3px rgba(0,0,0,0.05); }
+        .form-row { display: flex; gap: 15px; }
+        .form-row input { flex: 1; }
+
+        /* Premium Radio Options */
+        .premium-payment-label { display: flex; align-items: center; padding: 15px 20px; border: 2px solid #eee; border-radius: 10px; margin-bottom: 12px; cursor: pointer; transition: 0.3s; position: relative; }
+        .premium-payment-label:hover { border-color: #bbb; background: #fafafa; }
+        .premium-payment-label input[type="radio"] { display: none; }
+        .custom-radio-circle { width: 18px; height: 18px; border: 2px solid #ccc; border-radius: 50%; margin-right: 15px; display: inline-block; position: relative; transition: 0.3s; }
+        .premium-payment-label input[type="radio"]:checked + .custom-radio-circle { border-color: #333; }
+        .premium-payment-label input[type="radio"]:checked + .custom-radio-circle::after { content: ''; position: absolute; width: 10px; height: 10px; background: #333; border-radius: 50%; top: 4px; left: 4px; }
+        .premium-payment-label input[type="radio"]:checked ~ .payment-meta strong { color: #333; }
+        .premium-payment-label:has(input[type="radio"]:checked) { border-color: #333; background: rgba(0,0,0,0.01); }
+        .payment-meta { flex: 1; }
+        .payment-meta strong { font-size: 0.95rem; display: block; color: #555; }
+        .payment-meta p { margin: 2px 0 0 0; font-size: 0.8rem; color: #777; }
+        .premium-payment-label i { font-size: 1.4rem; color: #555; }
+
+        /* Summary Panel Items Box */
+        .summary-items-scrollbox { max-height: 240px; overflow-y: auto; margin-bottom: 20px; padding-right: 5px; }
+        .summary-checkout-item { display: flex; align-items: center; gap: 15px; padding: 12px 0; border-bottom: 1px dashed #eee; }
+        .summary-item-thumb { width: 60px; height: 60px; border-radius: 8px; overflow: hidden; background: #f5f5f5; border: 1px solid #eee; flex-shrink: 0; }
+        .summary-item-thumb img { width: 100%; height: 100%; object-fit: cover; }
+        .summary-item-info { flex: 1; }
+        .summary-item-info h4 { margin: 0; font-size: 0.9rem; font-weight: 500; }
+        .summary-item-info p { margin: 4px 0 0 0; font-size: 0.8rem; color: #777; }
+        .summary-item-price { font-weight: 600; font-size: 0.9rem; }
+
+        /* Promo UI Elements */
+        .promo-code-container { display: flex; gap: 10px; margin-bottom: 18px; }
+        .promo-code-container input { flex: 1; padding: 10px 14px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; font-size: 0.9rem; }
+        .promo-code-container button { padding: 10px 16px; background: #333; color: #fff; border: none; border-radius: 8px; font-weight: 500; cursor: pointer; transition: 0.2s; }
+        .promo-code-container button:hover { background: #000; }
+        .promo-msg-feedback { font-size: 0.8rem; font-weight: 500; margin-top: -12px; margin-bottom: 12px; display: none; }
+
+        /* Pricing Totals Box */
+        .receipt-pricing-footer { background: #fafafa; padding: 15px; border-radius: 8px; }
+        .receipt-row { display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 8px; color: #666; }
+        .free-shipping-tag { color: #2e7d32; font-weight: 600; font-size: 0.85rem; background: rgba(46,125,50,0.1); padding: 2px 8px; border-radius: 4px; }
+        .checkout-grand-total { font-size: 1.3rem; margin: 10px 0 0 0; font-weight: 700; color: #111; display: flex; justify-content: space-between; }
+        .place-order { width: 100%; padding: 15px; background: #2e7d32; color: white; border: none; border-radius: 8px; font-size: 1.05rem; font-weight: 600; cursor: pointer; margin-top: 20px; transition: 0.3s; box-shadow: 0 4px 12px rgba(46,125,50,0.2); }
+        .place-order:hover { background: #1b5e20; transform: translateY(-1px); }
+
+        @media(max-width: 768px) {
+            .checkout-two-column-grid { grid-template-columns: 1fr; }
+            .form-row { flex-direction: column; gap: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="main-header">
+        <nav class="navbar" aria-label="Main Navigation">
+            <div class="logo">
+                <i class="fa-solid fa-shoe-prints"></i>
+                <span>StepStyle</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="icon-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <a href="wishlist.html" class="icon-btn" aria-label="Wishlist"><i class="fa-solid fa-heart"></i></a>
+                <a href="cart.html" class="icon-btn" aria-label="Shopping Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="login.html" class="btn login-btn">Login</a>
+                <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= CHECKOUT SECTION ================= -->
+    <section class="checkout-section">
+        <div class="checkout-layout-container">
+            
+            <!-- Modern Visual Steps Bar Tracker -->
+            <div class="checkout-progress-bar">
+                <div class="progress-line-fill"></div>
+                <div class="step completed">
+                    <div class="step-icon"><i class="fa-solid fa-check"></i></div>
+                    <div class="step-label">Bag</div>
+                </div>
+                <div class="step active">
+                    <div class="step-icon">2</div>
+                    <div class="step-label">Checkout</div>
+                </div>
+                <div class="step">
+                    <div class="step-icon">3</div>
+                    <div class="step-label">Success</div>
+                </div>
+            </div>
+
+            <div class="checkout-header-block" style="margin-bottom: 25px;">
+                <h1 style="margin: 0; font-size: 2rem; font-weight: 700;">Checkout</h1>
+                <a href="cart.html" class="back-link" style="color: #666; text-decoration: none; font-size: 0.9rem; display: inline-block; margin-top: 5px;"><i class="fa-solid fa-arrow-left"></i> Return to Cart</a>
+            </div>
+
+            <form id="checkoutForm" class="checkout-two-column-grid">
+                
+                <!-- Left Column: Input Forms -->
+                <div class="checkout-forms-column">
+                    
+                    <!-- Delivery Panel -->
+                    <div class="checkout-box-card">
+                        <h2>Delivery Address</h2>
+                        <div class="form-input-stack">
+                            <div class="form-row">
+                                <input type="text" placeholder="Full Name" required>
+                                <input type="tel" placeholder="Mobile Number" required>
+                            </div>
+                            <input type="text" placeholder="House No / Street / Apartment" required>
+                            <div class="form-row triple-split">
+                                <input type="text" placeholder="City" required>
+                                <input type="text" placeholder="State" required>
+                                <input type="text" placeholder="PIN Code" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Panel -->
+                    <div class="checkout-box-card">
+                        <h2>Payment Method</h2>
+                        <div class="payment-options-list">
+                            
+                            <label class="premium-payment-label">
+                                <input type="radio" name="payment" value="cod" checked>
+                                <span class="custom-radio-circle"></span>
+                                <div class="payment-meta">
+                                    <strong>Cash On Delivery (COD)</strong>
+                                    <p>Pay with cash directly upon delivery</p>
+                                </div>
+                                <i class="fa-solid fa-money-bill-wave"></i>
+                            </label>
+
+                            <label class="premium-payment-label">
+                                <input type="radio" name="payment" value="upi">
+                                <span class="custom-radio-circle"></span>
+                                <div class="payment-meta">
+                                    <strong>Instant UPI</strong>
+                                    <p>Google Pay, PhonePe, or PayTM</p>
+                                </div>
+                                <i class="fa-solid fa-qrcode"></i>
+                            </label>
+
+                            <label class="premium-payment-label">
+                                <input type="radio" name="payment" value="card">
+                                <span class="custom-radio-circle"></span>
+                                <div class="payment-meta">
+                                    <strong>Credit / Debit Card</strong>
+                                    <p>Visa, Mastercard, or RuPay</p>
+                                </div>
+                                <i class="fa-solid fa-credit-card"></i>
+                            </label>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Column: Summary Card with Promo System Integration -->
+                <div class="checkout-sidebar-column">
+                    <div class="sticky-summary-card">
+                        <h2>Order Summary</h2>
+                        
+                        <div id="orderItems" class="summary-items-scrollbox"></div>
+                        
+                        <!-- Interactive Voucher/Promo Fields -->
+                        <div class="promo-code-container">
+                            <input type="text" id="promoInput" placeholder="Promo code (e.g. STEP20)">
+                            <button type="button" id="applyPromoBtn">Apply</button>
+                        </div>
+                        <div id="promoFeedback" class="promo-msg-feedback"></div>
+
+                        <div class="receipt-pricing-footer">
+                            <div class="receipt-row">
+                                <span>Shipping Fees</span>
+                                <span class="free-shipping-tag">FREE</span>
+                            </div>
+                            <div class="receipt-row" id="discountContainer" style="display: none; color: #2e7d32; font-weight: 500;">
+                                <span>Discount Extra</span>
+                                <span id="discountValue">-₹0</span>
+                            </div>
+                            <hr class="receipt-divider" style="border: 0; border-top: 1px dashed #ddd; margin: 12px 0;">
+                            <div class="checkout-grand-total">
+                                <span>Total:</span>
+                                <span id="totalPrice">₹0</span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="place-order" id="placeOrder">Place Order</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-box">
+                <h2>StepStyle</h2>
+                <p>Premium footwear crafted for people who never stop moving.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="categories.html">Categories</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-box">
+                <h3>Customer Care</h3>
+                <a href="#">Track Order</a>
+                <a href="#">Shipping</a>
+                <a href="#">Returns</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div class="footer-box">
+                <h3>Contact</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Hyderabad, India</p>
+                <p><i class="fa-solid fa-envelope"></i> stepstyle@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> +91 9876543210</p>
+            </div>
+        </div>
+        <hr style="border:0; border-top:1px solid #eee; margin:20px 0;">
+        <p class="copyright" style="text-align:center; color:#888; font-size:0.85rem;">© 2026 StepStyle. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript Files -->
+
+    <script src="script.js"></script>
+</body>
+</html>

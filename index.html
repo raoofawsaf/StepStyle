@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StepStyle | Premium Footwear</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="main-header">
+        <nav class="navbar" aria-label="Main Navigation">
+            <div class="logo">
+                <i class="fa-solid fa-shoe-prints"></i>
+                <span>StepStyle</span>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="icon-btn" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <a href="wishlist.html" class="icon-btn" aria-label="Wishlist">
+                    <i class="fa-solid fa-heart"></i>
+                </a>
+                <a href="cart.html" class="icon-btn" aria-label="Shopping Cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+                <a href="login.html" class="btn login-btn">Login</a>
+                <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= HERO WITH INTERACTIVE HOTSPOTS ================= -->
+    <section class="home-hero">
+        <div class="home-hero-content">
+            <span class="home-hero-tag">NEW COLLECTION 2026</span>
+            <h1>Step Into<br><span class="highlight-orange">The Future</span></h1>
+            <p>Premium Sneakers engineered with space-grade materials for ultimate performance, comfort, and street-ready style.</p>
+            
+            <div class="home-hero-buttons">
+                <a href="products.html" class="btn-hero-primary">Shop Now <i class="fa-solid fa-bolt"></i></a>
+                <a href="categories.html" class="btn-hero-secondary">Explore Series</a>
+            </div>
+            
+            <div class="home-hero-stats">
+                <div class="home-hero-stat">
+                    <h3>50K+</h3>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="home-hero-stat-divider"></div>
+                <div class="home-hero-stat">
+                    <h3>4.9 <i class="fa-solid fa-star"></i></h3>
+                    <p>Average Rating</p>
+                </div>
+                <div class="home-hero-stat-divider"></div>
+                <div class="home-hero-stat">
+                    <h3>150+</h3>
+                    <p>Premium Styles</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Visual Showcase Area -->
+        <div class="home-hero-visual">
+            <div class="home-hero-glow"></div>
+            
+            <div class="hotspot-wrapper">
+                <!-- Main Showcased Sneaker -->
+                <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=900&q=80" alt="Featured Sneaker" class="home-hero-shoe">
+                
+                <!-- Hotspot 1: Ankle Support -->
+                <div class="hotspot" style="top: 28%; left: 32%;">
+                    <div class="hotspot-pulse"></div>
+                    <div class="hotspot-trigger"></div>
+                    <div class="hotspot-tooltip">
+                        <h6>Smart Ankle Collar</h6>
+                        <p>Adaptive memory foam cushioning.</p>
+                    </div>
+                </div>
+
+                <!-- Hotspot 2: Lacing system -->
+                <div class="hotspot" style="top: 52%; left: 48%;">
+                    <div class="hotspot-pulse"></div>
+                    <div class="hotspot-trigger"></div>
+                    <div class="hotspot-tooltip">
+                        <h6>Dynamic Lacing</h6>
+                        <p>Tension-distributing lock system.</p>
+                    </div>
+                </div>
+
+                <!-- Hotspot 3: Sole -->
+                <div class="hotspot" style="top: 76%; left: 62%;">
+                    <div class="hotspot-pulse"></div>
+                    <div class="hotspot-trigger"></div>
+                    <div class="hotspot-tooltip">
+                        <h6>Responsive Air Sole</h6>
+                        <p>270-degree high-impact absorption.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating Badges -->
+            <div class="home-floating-badge home-badge-top">
+                <i class="fa-solid fa-truck-fast"></i>
+                <span>Free Delivery</span>
+            </div>
+            <div class="home-floating-badge home-badge-bottom">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>1 Year Warranty</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PREMIUM MARQUEE STRIP ================= -->
+    <div class="marquee-wrapper">
+        <div class="marquee">
+            <div class="marquee-track">
+                <span><i class="fa-solid fa-truck-fast"></i> Free Shipping Over ₹1999</span>
+                <span><i class="fa-solid fa-rotate-left"></i> 30-Day Easy Returns</span>
+                <span><i class="fa-solid fa-certificate"></i> 100% Authentic Products</span>
+                <span><i class="fa-solid fa-headset"></i> 24/7 Customer Support</span>
+                <!-- Duplicated for infinite seamless loop -->
+                <span><i class="fa-solid fa-truck-fast"></i> Free Shipping Over ₹1999</span>
+                <span><i class="fa-solid fa-rotate-left"></i> 30-Day Easy Returns</span>
+                <span><i class="fa-solid fa-certificate"></i> 100% Authentic Products</span>
+                <span><i class="fa-solid fa-headset"></i> 24/7 Customer Support</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ================= HYPER-COOL CATEGORIES ================= -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <div class="section-header-cool">
+                <span class="cool-tag">THE REVOLUTION</span>
+                <h2>Explore Collections</h2>
+            </div>
+            
+            <div class="category-editorial-layout">
+                <!-- LEFT SIDE: Main Featured Audiences -->
+                <div class="category-main-featured">
+                    <!-- Women's Collection -->
+                    <article class="category-card card-half-height premium-glass">
+                        <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=800&q=80" alt="Women's Collection">
+                        <div class="glow-overlay"></div>
+                        <span class="editorial-badge">WOMEN</span>
+                        <div class="category-info">
+                            <h3>Women's Edit</h3>
+                            <p>Trending Sneakers, Heels &amp; Girls' Slippers <span class="count">· 54 Items</span></p>
+                            <a href="products.html?target=women" class="btn-link-neon">Shop Women <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Men's Collection -->
+                    <article class="category-card card-half-height premium-glass">
+                        <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=800&q=80" alt="Men's Collection">
+                        <div class="glow-overlay"></div>
+                        <span class="editorial-badge">MEN</span>
+                        <div class="category-info">
+                            <h3>Men's Edit</h3>
+                            <p>Premium Streetwear &amp; Athletics <span class="count">· 42 Items</span></p>
+                            <a href="products.html?target=men" class="btn-link-neon">Shop Men <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- RIGHT SIDE: Specialty Sub-Grid -->
+                <div class="category-sub-grid">
+                    <!-- Kids & Girls Footwear -->
+                    <article class="category-card premium-glass">
+                        <img src="https://images.unsplash.com/photo-1519457431-44ccd64a579b?auto=format&fit=crop&w=600&q=80" alt="Kids Shoes">
+                        <div class="glow-overlay"></div>
+                        <span class="editorial-badge badge-sub">KIDS</span>
+                        <div class="category-info">
+                            <h3>Kids &amp; Junior</h3>
+                            <p>Play-proof Sneakers &amp; Boots</p>
+                        </div>
+                    </article>
+
+                    <!-- Slippers, Slides & Loungewear -->
+                    <article class="category-card premium-glass">
+                        <img src="https://images.unsplash.com/photo-1603487742131-4160ec999306?auto=format&fit=crop&w=600&q=80" alt="Slippers and Slides">
+                        <div class="glow-overlay"></div>
+                        <span class="editorial-badge badge-sub">LITE</span>
+                        <div class="category-info">
+                            <h3>Slides &amp; Slippers</h3>
+                            <p>Plush comfort for girls &amp; guys</p>
+                        </div>
+                    </article>
+
+                    <!-- Athletic / Running -->
+                    <article class="category-card premium-glass">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="Running Shoes">
+                        <div class="glow-overlay"></div>
+                        <span class="editorial-badge badge-sub">RUN</span>
+                        <div class="category-info">
+                            <h3>Performance</h3>
+                            <p>Built for Speed &amp; Track</p>
+                        </div>
+                    </article>
+
+                    <!-- Accessories & Care -->
+                    <article class="category-card premium-glass">
+                        <img src="https://images.unsplash.com/photo-1607522370275-f14206abe5d3?auto=format&fit=crop&w=600&q=80" alt="Shoe Care & Socks">
+                        <div class="glow-overlay"></div>
+                        <span class="editorial-badge badge-sub">GEAR</span>
+                        <div class="category-info">
+                            <h3>Essentials</h3>
+                            <p>Premium Socks &amp; Shoe Care</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    <!-- ================= HYPER-COOL TRENDING DECK ================= -->
+    <section class="products">
+        <div class="container">
+            <div class="section-header-cool">
+                <span class="cool-tag">THE HOT LIST</span>
+                <h2>Trending Now</h2>
+            </div>
+
+            <div class="product-grid">
+                <!-- CARD 1: Urban Runner -->
+                <article class="product-card premium-glass">
+                    <div class="product-thumb">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="Urban Runner">
+                        <div class="glow-overlay"></div>
+                        <span class="product-badge sale-badge">-30%</span>
+                        
+                        <div class="product-actions-panel">
+                            <button class="action-circle-btn wishlist-btn" aria-label="Add to Wishlist"
+                                    data-name="Urban Runner" data-price="3499" data-category="Sneakers"
+                                    data-image="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80">
+                                <i class="fa-solid fa-heart"></i>
+                            </button>
+                            <button class="action-circle-btn quick-add-btn" aria-label="Quick Add">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-info-cool">
+                        <span class="product-category-tag">MEN'S STREETWEAR</span>
+                        <h3>Urban Runner</h3>
+                        <div class="stars-cool">
+                            <i class="fa-solid fa-star"></i> 4.9 <span class="review-count">(214)</span>
+                        </div>
+                        <div class="price-row-cool">
+                            <p class="price-cool">₹3,499 <span class="old-price">₹4,999</span></p>
+                            <a href="product-details.html?id=1" class="btn-buy-neon">Buy <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD 2: Street Air -->
+                <article class="product-card premium-glass">
+                    <div class="product-thumb">
+                        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=600&q=80" alt="Street Air">
+                        <div class="glow-overlay"></div>
+                        <span class="product-badge new-badge">NEW</span>
+                        
+                        <div class="product-actions-panel">
+                            <button class="action-circle-btn wishlist-btn" aria-label="Add to Wishlist"
+                                    data-name="Street Air" data-price="4299" data-category="Sneakers"
+                                    data-image="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=600&q=80">
+                                <i class="fa-solid fa-heart"></i>
+                            </button>
+                            <button class="action-circle-btn quick-add-btn" aria-label="Quick Add">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-info-cool">
+                        <span class="product-category-tag">WOMEN'S LIFESTYLE</span>
+                        <h3>Street Air</h3>
+                        <div class="stars-cool">
+                            <i class="fa-solid fa-star"></i> 5.0 <span class="review-count">(189)</span>
+                        </div>
+                        <div class="price-row-cool">
+                            <p class="price-cool">₹4,299 <span class="old-price">₹5,299</span></p>
+                            <a href="product-details.html?id=2" class="btn-buy-neon">Buy <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD 3: Junior Flex -->
+                <article class="product-card premium-glass">
+                    <div class="product-thumb">
+                        <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=600&q=80" alt="Junior Flex">
+                        <div class="glow-overlay"></div>
+                        <span class="product-badge kids-badge">KIDS</span>
+                        
+                        <div class="product-actions-panel">
+                            <button class="action-circle-btn wishlist-btn" aria-label="Add to Wishlist"
+                                    data-name="Junior Flex" data-price="2499" data-category="Kids"
+                                    data-image="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=600&q=80">
+                                <i class="fa-solid fa-heart"></i>
+                            </button>
+                            <button class="action-circle-btn quick-add-btn" aria-label="Quick Add">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-info-cool">
+                        <span class="product-category-tag">KIDS ACTIVE</span>
+                        <h3>Junior Flex</h3>
+                        <div class="stars-cool">
+                            <i class="fa-solid fa-star"></i> 4.8 <span class="review-count">(84)</span>
+                        </div>
+                        <div class="price-row-cool">
+                            <p class="price-cool">₹2,499 <span class="old-price">₹3,499</span></p>
+                            <a href="product-details.html?id=3" class="btn-buy-neon">Buy <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= HYPER-COOL INTERACTIVE OFFER ================= -->
+    <section class="offer-banner-cool">
+        <div class="offer-split-grid">
+            <!-- Left Side: Interactive Hype Copy & Countdown -->
+            <div class="offer-content-cool">
+                <div class="offer-badge-row">
+                    <span class="offer-tag-neon">FLASH DROP</span>
+                    <span class="offer-tag-outline">50% OFF</span>
+                </div>
+                <h2>SUMMER<br><span class="highlight-text">STREET HEAT</span></h2>
+                <p>Unlocking premium sneaker archives. Claim your pair before the timer hits zero.</p>
+                
+                <!-- Live Countdown Timer -->
+                <div class="countdown-container">
+                    <div class="countdown-box">
+                        <span id="hours" class="time-num">12</span>
+                        <span class="time-label">HRS</span>
+                    </div>
+                    <div class="countdown-divider">:</div>
+                    <div class="countdown-box">
+                        <span id="minutes" class="time-num">45</span>
+                        <span class="time-label">MINS</span>
+                    </div>
+                    <div class="countdown-divider">:</div>
+                    <div class="countdown-box">
+                        <span id="seconds" class="time-num">09</span>
+                        <span class="time-label">SECS</span>
+                    </div>
+                </div>
+
+                <a href="products.html?sale=true" class="btn-offer-neon">
+                    Secure Your Pair <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Right Side: Graphic Visual Element -->
+            <div class="offer-visual-cool">
+                <div class="halo-glow"></div>
+                <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?auto=format&fit=crop&w=800&q=80" alt="Exclusive Sneaker Deal" class="offer-shoe-img">
+                <div class="discount-pill">
+                    <span>EXTRA ₹500 OFF ON PRE-PAID</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= REVIEWS ================= -->
+    <section class="reviews">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="review-grid">
+                <div class="review-card">
+                    <h3>Rahul Sharma</h3>
+                    <div class="stars">★★★★★</div>
+                    <p>"The quality is amazing. Super comfortable and looks even better in real life."</p>
+                </div>
+                <div class="review-card">
+                    <h3>Sara Khan</h3>
+                    <div class="stars">★★★★★</div>
+                    <p>"Absolutely love these sneakers. Fast delivery and premium packaging."</p>
+                </div>
+                <div class="review-card">
+                    <h3>Arjun Patel</h3>
+                    <div class="stars">★★★★☆</div>
+                    <p>"Stylish design with excellent comfort. Worth every rupee."</p>
+                </div>
+                <div class="review-card">
+                    <h3>Priya Nair</h3>
+                    <div class="stars">★★★★★</div>
+                    <p>"Ordered the running shoes for my morning jog — best purchase this year."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-box">
+                <h2>StepStyle</h2>
+                <p>Premium footwear crafted for people who never stop moving.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="categories.html">Categories</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-box">
+                <h3>Customer Care</h3>
+                <a href="#">Track Order</a>
+                <a href="#">Shipping</a>
+                <a href="#">Returns</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div class="footer-box">
+                <h3>Contact</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Hyderabad, India</p>
+                <p><i class="fa-solid fa-envelope"></i> stepstyle@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> +91 9876543210</p>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">© 2026 StepStyle. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

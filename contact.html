@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | StepStyle</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="main-header">
+        <nav class="navbar" aria-label="Main Navigation">
+            <div class="logo">
+                <i class="fa-solid fa-shoe-prints"></i>
+                <span>StepStyle</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="icon-btn" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <a href="wishlist.html" class="icon-btn" aria-label="Wishlist">
+                    <i class="fa-solid fa-heart"></i>
+                </a>
+                <a href="cart.html" class="icon-btn" aria-label="Shopping Cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+                <a href="login.html" class="btn login-btn">Login</a>
+                <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section class="contact-hero-banner">
+        <div class="hero-gradient-overlay"></div>
+        <div class="hero-text-box">
+            <span class="hero-sub">GET IN TOUCH</span>
+            <h1>Contact <span>StepStyle</span></h1>
+            <p>Have questions about sizing, orders, or care? Our team is standing by to help you look your best.</p>
+        </div>
+    </section>
+
+    <!-- ================= SPLIT CONTACT COMPONENT ================= -->
+    <section class="split-contact-wrapper">
+        <div class="contact-split-container">
+            
+            <!-- Information Panel -->
+            <div class="info-sidebar-panel">
+                <div class="panel-header">
+                    <h2>Contact Information</h2>
+                    <p>Reach out to us directly through any of these channels or drop us a message.</p>
+                </div>
+                
+                <div class="sidebar-cards-list">
+                    <div class="compact-info-card">
+                        <div class="icon-sphere"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="card-details">
+                            <h3>Our Headquarters</h3>
+                            <p>Hyderabad, Telangana, India</p>
+                        </div>
+                    </div>
+                    <div class="compact-info-card">
+                        <div class="icon-sphere"><i class="fa-solid fa-phone"></i></div>
+                        <div class="card-details">
+                            <h3>Call Support</h3>
+                            <p>+91 98765 43210</p>
+                        </div>
+                    </div>
+                    <div class="compact-info-card">
+                        <div class="icon-sphere"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="card-details">
+                            <h3>Email Us</h3>
+                            <p>support@stepstyle.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-accent-shape"></div>
+            </div>
+
+            <!-- Form Panel -->
+            <div class="interactive-form-panel">
+                <h2>Send Us A Message</h2>
+                <p class="form-desc">Fill out the form below, and our support experts will respond within 24 hours.</p>
+                
+                <form id="contactForm" class="styled-clean-form">
+                    <div class="form-input-row">
+                        <div class="input-group-field">
+                            <label>Your Name</label>
+                            <input type="text" placeholder="John Doe" required>
+                        </div>
+                        <div class="input-group-field">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="john@example.com" required>
+                        </div>
+                    </div>
+                    <div class="input-group-field">
+                        <label>Subject</label>
+                        <input type="text" placeholder="Order Tracking / Product Inquiry" required>
+                    </div>
+                    <div class="input-group-field">
+                        <label>Your Message</label>
+                        <textarea placeholder="Write your thoughts here..." rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-action-btn">
+                        <span>Send Message</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= METRICS & DEPT FEATURES ================= -->
+    <section class="operational-perks-section">
+        <div class="perks-inner-container">
+            <div class="perk-metric-card">
+                <div class="perk-icon-wrapper"><i class="fa-solid fa-clock"></i></div>
+                <h3>Business Hours</h3>
+                <p class="perk-highlight">Mon - Sat: 9 AM - 8 PM</p>
+                <p class="perk-subtext">Sunday: Support Closed</p>
+            </div>
+            <div class="perk-metric-card">
+                <div class="perk-icon-wrapper"><i class="fa-solid fa-truck"></i></div>
+                <h3>Delivery Support</h3>
+                <p class="perk-highlight">Pan-India Logistics</p>
+                <p class="perk-subtext">Real-time express tracking</p>
+            </div>
+            <div class="perk-metric-card">
+                <div class="perk-icon-wrapper"><i class="fa-solid fa-headset"></i></div>
+                <h3>Customer Support</h3>
+                <p class="perk-highlight">24/7 Digital Desk</p>
+                <p class="perk-subtext">Fast email resolution lines</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= REFACTORED FAQ SECTION ================= -->
+    <section class="dedicated-faq-section">
+        <div class="faq-inner-container">
+            <h2 class="centered-section-heading">Frequently Asked Questions</h2>
+            <p class="faq-section-sub">Quick solutions to everyday inquiries</p>
+            
+            <div class="faq-accordion-stack">
+                <details class="faq-item-box" open>
+                    <summary class="faq-trigger">
+                        <span>How long is delivery?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </summary>
+                    <div class="faq-content-pane">
+                        <p>Standard shipping takes 3-7 working days depending on location. Express shipping items typically arrive within 48 hours inside tier-1 metropolitan cities.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item-box">
+                    <summary class="faq-trigger">
+                        <span>Can I return or exchange shoes?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </summary>
+                    <div class="faq-content-pane">
+                        <p>Yes! We offer a hassle-free 7-day window for returns or size exchanges. Footwear must be unworn and inside original product packaging boxes.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item-box">
+                    <summary class="faq-trigger">
+                        <span>Do you provide shoe care products?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </summary>
+                    <div class="faq-content-pane">
+                        <p>We feature premium cleaning kits, direct color waxes, protectors, and specialized accessories engineered for suede, leather, and sneaker mesh fabrics.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= NEWSLETTER ================= -->
+    <section class="inline-newsletter-banner">
+        <div class="newsletter-card-frame">
+            <div class="newsletter-text-stack">
+                <h2>Subscribe Newsletter</h2>
+                <p>Get updates about new arrivals, private drops, and exclusive flash offers.</p>
+            </div>
+            <form class="newsletter-action-bar">
+                <input type="email" placeholder="Enter your email" required aria-label="Email subscription input">
+                <button type="submit" class="newsletter-submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ================= FLOATING WHATSAPP ================= -->
+    <a href="https://wa.me/919876543210" class="floating-whatsapp-widget" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-box">
+                <h2>StepStyle</h2>
+                <p>Premium footwear crafted for people who never stop moving.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="categories.html">Categories</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-box">
+                <h3>Customer Care</h3>
+                <a href="#">Track Order</a>
+                <a href="#">Shipping</a>
+                <a href="#">Returns</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div class="footer-box">
+                <h3>Contact</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Hyderabad, India</p>
+                <p><i class="fa-solid fa-envelope"></i> stepstyle@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> +91 9876543210</p>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">© 2026 StepStyle. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
